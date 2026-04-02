@@ -1,0 +1,11 @@
+- name: Setup FreeIPA Server
+  hosts: ipa_server
+  become: yes
+  roles:
+    - ipa_server
+
+- name: Setup FreeIPA Clients
+  hosts: ipa_clients
+  become: yes
+  roles:
+    - ipa_client
